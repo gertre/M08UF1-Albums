@@ -1,0 +1,9 @@
+<div>
+	<table class="table">
+		<tr *ngFor="let album of albums"  [routerLink]="['/detall', album.id]">
+			<th>{{album.nom}}</th>
+			<th>{{album.grup}}</th>
+			<th><img [src] = album.imatge height="100" width="100"></th>
+		</tr>
+	</table>
+</div>
