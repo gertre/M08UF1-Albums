@@ -1,3 +1,44 @@
 <p>
   crearalbum works!
 </p>
+
+<div class="container">
+    <h2>Afegir album</h2>
+
+    <form>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="grup">Grup</label>
+        <input type="text" class="form-control" required>
+      </div>
+		
+		<div class="form-group">
+	        <label for="imatge">imatge</label>
+	        <input type="image" img src="{{imagePath}}" class="form-control" required>
+      	</div>
+
+		<div class="form-group">
+	        <label for="any">Any</label>
+	        <input type="text" class="form-control" required>
+      	</div>
+
+      	<div class="form-group">
+	        <label for="tipus">Tipus</label>
+	        <input type="text" class="form-control" required>
+      	</div>
+        
+
+        <div class="form-group">
+	        <label for="comentaris">comentaris</label>
+	        <input type="text" class="form-control" required>
+      	</div>
+
+      <button type="submit" class="btn btn-default">Guardar</button>
+       <button type="return" class="btn btn-default">Retorn</button>
+    </form>
+
+</div>
