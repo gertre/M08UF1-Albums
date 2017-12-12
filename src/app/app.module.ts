@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LlistaalbumComponent } from './llistaalbum/llistaalbum.component';
 import { CrearalbumComponent } from './crearalbum/crearalbum.component';
 import { DetallalbumComponent } from './detallalbum/detallalbum.component';
+import { AlbumsService } from './albums.service';
 
 const appRoutes: Routes = [ 
  { path: 'llista', component: LlistaalbumComponent },
@@ -24,7 +25,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AlbumsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
