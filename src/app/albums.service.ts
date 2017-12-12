@@ -5,11 +5,6 @@ import { Injectable } from '@angular/core';
 export class AlbumsService{
 
 	albumStorage = [];
-	constructor(){
-
-		console.log("Constructor AlbumsService");
-		this.albumStorage = JSON.parse(localStorage.getItem('albums'));
-	}
 
 	albums = [
 	{
@@ -42,6 +37,12 @@ export class AlbumsService{
 	}
 	];
 
+	constructor(){
+
+		this.albumStorage = JSON.parse(localStorage.getItem('albums'));
+	}
+
+
 	add({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris}){
 		this.albums.push({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris});
 		localStorage.setItem('albums', JSON.stringify(this.albums));
@@ -53,8 +54,6 @@ export class AlbumsService{
 	deleteAlbum(album: any){
 		let albums_tmp = this.albums.filter(item => item !==  album);
 		this.albums = albums_tmp;
-
-		console.log(this.albums);
 	}
 
 }

@@ -5,8 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-detallalbum',
   templateUrl: './detallalbum.component.html',
-  styleUrls: ['./detallalbum.component.css'],
-  providers: [AlbumsService]
+  styleUrls: ['./detallalbum.component.css']
 })
 export class DetallalbumComponent implements OnInit {
 	id = 0;

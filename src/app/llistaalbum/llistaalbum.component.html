@@ -1,10 +1,10 @@
 <div>
-	{{ albums | json}}
 	<table class="table">
-		<tr *ngFor="let album of albums"  [routerLink]="['/detall', album.id]">
-			<th>{{album.nom}}</th>
-			<th>{{album.grup}}</th>
-			<th><img [src] = album.imatge height="100" width="100"></th>
+		<tr *ngFor="let album of albums" >
+			<td>{{album.nom}}</td>
+			<td>{{album.grup}}</td>
+			<td><img [src] = album.imatge height="100" widtd="100"></td>
+			<td><button [routerLink]="['/detall', album.id]" class="btn btn-info"> + Info</button></td>
 		</tr>
 	</table>
 </div>

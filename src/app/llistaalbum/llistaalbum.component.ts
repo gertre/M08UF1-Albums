@@ -4,14 +4,12 @@ import { AlbumsService } from '../albums.service';
 @Component({
   selector: 'app-llistaalbum',
   templateUrl: './llistaalbum.component.html',
-  styleUrls: ['./llistaalbum.component.css'],
-  providers: [AlbumsService]
+  styleUrls: ['./llistaalbum.component.css']
 })
 export class LlistaalbumComponent implements OnInit {
 
   albums = [];
   constructor(private llistaAlbumsService: AlbumsService) {
-console.log("Constructor LlistaalbumComponent");
 
   }
 
@@ -21,8 +19,6 @@ console.log("Constructor LlistaalbumComponent");
   }
   ngAfterViewInit(){
   	this.albums = this.llistaAlbumsService.getAlbums();
-  	console.log("llistaafer");
-  	console.log(this.albums);
   }
 
 }
