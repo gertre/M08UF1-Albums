@@ -1,4 +1,5 @@
 <div>
+	{{ albums | json}}
 	<table class="table">
 		<tr *ngFor="let album of albums"  [routerLink]="['/detall', album.id]">
 			<th>{{album.nom}}</th>

@@ -11,10 +11,18 @@ export class LlistaalbumComponent implements OnInit {
 
   albums = [];
   constructor(private llistaAlbumsService: AlbumsService) {
-  	this.albums = this.llistaAlbumsService.getAlbums();
+console.log("Constructor LlistaalbumComponent");
+
   }
 
   ngOnInit() {
+    this.albums = this.llistaAlbumsService.getAlbums();
+
+  }
+  ngAfterViewInit(){
+  	this.albums = this.llistaAlbumsService.getAlbums();
+  	console.log("llistaafer");
+  	console.log(this.albums);
   }
 
 }
