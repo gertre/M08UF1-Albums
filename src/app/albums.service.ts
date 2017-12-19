@@ -67,5 +67,6 @@ export class AlbumsService{
 		let albums_tmp = this.albums.filter(item => item !==  album);
 		this.albums = albums_tmp;
 	}
+	
 
 }
