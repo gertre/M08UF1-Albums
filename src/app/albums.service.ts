@@ -28,7 +28,7 @@ export class AlbumsService{
 	},
 	{
 		id: 3,
-		nom: "Hybrid theoryy",
+		nom: "Hybrid theory",
 		grup: "Linkin Park",
 		imatge: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PM5544_with_non-PAL_signals.png/384px-PM5544_with_non-PAL_signals.png",
 		any: 2000,
