@@ -18,22 +18,31 @@ export class AlbumsService{
 	},
 	{
 		id: 2,
-		nom: "Test1",
-		grup: "test1",
-		imatge: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PM5544_with_non-PAL_signals.png/384px-PM5544_with_non-PAL_signals.png",
-		any: 2017,
-		tipus: "test1",
-		comentaris: "test comentaris"
+		nom: "Random Access Memories",
+		grup: "Daft Punk",
+		imatge: "https://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg",
+		any: 2013,
+		tipus: "electronica",
+		comentaris: "get lucky"
 
 	},
 	{
 		id: 3,
-		nom: "Test2",
-		grup: "test2",
+		nom: "Hybrid theory",
+		grup: "Linkin Park",
 		imatge: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PM5544_with_non-PAL_signals.png/384px-PM5544_with_non-PAL_signals.png",
-		any: 2017,
-		tipus: "test2",
+		any: 2000,
+		tipus: "rock",
 		comentaris: "test comentaris"
+	},
+	{
+		id: 4,
+		nom: "Test",
+		grup: "Test",
+		imatge: "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Daft_Punk_-_Discovery.jpg/220px-Daft_Punk_-_Discovery.jpg",
+		any: 2001,
+		tipus: "disco",
+		comentaris: "test"
 	}
 	];
 
