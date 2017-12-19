@@ -46,20 +46,23 @@ export class AlbumsService{
 	}
 	];
 
+	// El localstorage
 	constructor(){
 
 		this.albumStorage = JSON.parse(localStorage.getItem('albums'));
 	}
 
-
+	// Permet afegir un album i el guarda en localstorage
 	add({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris}){
 		this.albums.push({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris});
 		localStorage.setItem('albums', JSON.stringify(this.albums));
 	} 
+	// Retorna un album
 	getAlbums() {
 		return this.albums;
 	}
 
+	// Esborra un album
 	deleteAlbum(album: any){
 		let albums_tmp = this.albums.filter(item => item !==  album);
 		this.albums = albums_tmp;
