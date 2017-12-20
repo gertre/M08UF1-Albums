@@ -1,6 +1,4 @@
-<p>
-  crearalbum works!
-</p>
+<!--Creem el formulari on indiquem el nom de cada etiqueta, i haurem d'omplir els camps, cada camp sera obligat omplirlo"-->
 
 <div class="container">
     <h2>Afegir album</h2>
@@ -29,6 +27,7 @@
       	<div class="form-group">
 	        <label for="tipus">Tipus</label>
 	        <select [(ngModel)]="any" name="tipus">
+            <!--Creem un desplegable on haurem d'escollir el tipus de musica que serà l'album que creearem.-->
 	        	<option value="rock">rock</option>
 	        	<option value="electronica">electronica</option>
 	        	<option value="metal">metal</option>
@@ -37,18 +36,15 @@
 	        	<option value="reggae">reggae</option>
 	        	<option value="clasica">clasica</option>
 	        </select>
-      	</div>
-        
+      	</div>        
 
         <div class="form-group">
 	        <label for="comentaris">Comentaris</label>
 	        <input [(ngModel)]="comentaris" type="text" class="form-control" required>
       	</div>
 
-      <button type="submit" (click)="guardarAlbum()" class="btn btn-default">Guardar</button>
-      <button type="return" (click)="goBack()" class="btn btn-default">Retorn</button>
-
-
+      <button type="submit" (click)="guardarAlbum()" class="btn btn-default">Guardar</button> <!--Creem el botó de guardar l'album on li pasem la funció guardar quan cliquem a sobre el botó-->
+      <button type="return" (click)="goBack()" class="btn btn-default">Retorn</button><!--Creem el botó per retornar a la llista dels albums, on li pasem la funció retornar quan cliquem a sobre el botó-->
     </form>
 
 </div>

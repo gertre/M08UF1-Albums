@@ -1,11 +1,13 @@
 <table class="table">
   	<tr>
+  		 <!--A cada cela pasem l'atribut al mostrar els detalls del album-->
   		<th>{{album.nom}}</th>
 		<th>{{album.grup}}</th>
 		<th><img [src] = album.imatge></th>
 		<th>{{album.any}}</th>
 		<th>{{album.tipus}}</th>
 		<th>{{album.comentaris}}</th>
+		 <!--Creem el botó per eliminar l'album i al fer click, passemla funció eliminar album-->
 		<th><button  class="btn btn-danger" (click)="deleteAlbumDetall()" >Delete</button></th>
   	</tr>
 </table>
