@@ -1,13 +1,45 @@
-<h3>{{title}}</h3>
-<div class="container">
- <div class="row">
- <ul class="nav nav-tabs">
- <li role="presentation" routerLinkActive ="active" ><a routerLink="/llista">llista</a></li>   <!--A la pestanya on tindrem la llista dels albums li posem de nom "llista"-->
- <li role="presentation" routerLinkActive ="active"><a routerLink="/crear">crear</a></li> <!--A la pestanya on tindrem per crear els albums li posem de nom "crear"-->
- </ul>
- </div>
- <div class="row"> 
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Discos</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" role="presentation" routerLinkActive ="active" routerLink="/llista">llista</a>
+      <a class="mdl-navigation__link" role="presentation" routerLinkActive ="active" routerLink="/crear">crear</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><router-outlet></router-outlet></div>
+  </main>
+</div>
+<!--<button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item" role="presentation" routerLinkActive ="active" routerLink="/llista">llista</li>
+  <li class="mdl-menu__item" role="presentation" routerLinkActive ="active" routerLink="/crear">crear</li>
+</ul>
+
+ <div> 
  <router-outlet></router-outlet>
- </div>
-</div> 
+ </div> -->
 

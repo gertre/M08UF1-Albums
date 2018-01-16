@@ -1,10 +1,24 @@
-<div>
+<!--<div>
 	<table class="table">
-		<tr *ngFor="let album of albums" > <!--Creem una taula on mostrarem les dades dels albumbs que tenim actualment grabats-->
+		<tr *ngFor="let album of albums" > 
+			<td><img [src] = album.imatge height="100" width="100"></td>
 			<td>{{album.nom}}</td>
-			<td>{{album.grup}}</td>
-			<td><img [src] = album.imatge height="100" widtd="100"></td>
-			<td><button [routerLink]="['/detall', album.id]" class="btn btn-info"> + Info</button></td>
+			<td><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" [routerLink]="['/detall', album.id]" ><i class="material-icons">add</i></button></td>
 		</tr>
 	</table>
+</div>
+-->
+<style>
+.demo-list-action {
+  width: auto;
+}
+</style>
+<div class="demo-list-action mdl-list">
+  <div class="mdl-list__item" *ngFor="let album of albums" >
+    <span class="mdl-list__item-primary-content">
+      
+      <span>{{album.nom}}</span>
+    </span>
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" [routerLink]="['/detall', album.id]" ><i class="material-icons">add</i></button>
+  </div>
 </div>
