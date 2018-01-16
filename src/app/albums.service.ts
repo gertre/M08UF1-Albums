@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
 
 export class AlbumsService{
 
-	albumStorage = [];
+	albumStorage = []; // guardem tots els albums en una taula
 
+	// Creem tots els albums i els inicialitzem a la taula
 	albums = [
 	{
 		id: 1,
@@ -51,15 +52,19 @@ export class AlbumsService{
 		this.albumStorage = JSON.parse(localStorage.getItem('albums'));
 	}
 
+	// els afegim a la llista
 
 	add({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris}){
 		this.albums.push({id: id, nom: nom, grup: grup, imatge: imatge, any: any, tipus: tipus, comentaris: comentaris});
 		localStorage.setItem('albums', JSON.stringify(this.albums));
 	} 
+
+	// creem una funció per retornar els albums que tenim a la llista
 	getAlbums() {
 		return this.albums;
 	}
 
+	//Amb aquesta funció eliminarem l'album de la llista
 	deleteAlbum(album: any){
 		let albums_tmp = this.albums.filter(item => item !==  album);
 		this.albums = albums_tmp;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumsService } from "../albums.service";
+import { AlbumsService } from '../albums.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -16,13 +16,15 @@ export class DetallalbumComponent implements OnInit {
   }
   constructor(private router: Router, private detallAlbumsService : AlbumsService, private route : ActivatedRoute) { 
   	this.id=this.route.snapshot.params['id']
-  	this.album = this.detallAlbumsService.getAlbums().find(o => o.id == this.id);
+  	this.album = this.detallAlbumsService.getAlbums().find(o => o.id == this.id); 
   }
 
+    // creem la funcio que utilitzarem per eliminar albums 
+
     deleteAlbumDetall(){
-     this.detallAlbumsService.deleteAlbum(this.album);
+     this.detallAlbumsService.deleteAlbum(this.album); // eliminem l'album
      
-      this.router.navigate(['/llista']);
+      this.router.navigate(['/llista']); // tornem a la pagina principal
 
     }
  	

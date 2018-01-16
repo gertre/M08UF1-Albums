@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumsService } from "../albums.service";
+import { AlbumsService } from '../albums.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 export class CrearalbumComponent implements OnInit {
-
+// inicialitzem els altributs
   id=5;
   nom="";
   grup="";
@@ -27,14 +27,14 @@ export class CrearalbumComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ // Creem la funció per retornar al menu principal
   goBack() {
   this.router.navigate(['/llista']);
   }
-
+// Creem la funció per guardar l'album que creem
   guardarAlbum(){
 
-  	this.crearalbumsService.add({id: this.id, nom: this.nom, grup: this.grup, imatge: this.imatge, any: this.any, tipus: this.tipus, comentaris: this.comentaris});
+  	this.crearalbumsService.add({id: this.id, nom: this.nom, grup: this.grup, imatge: this.imatge, any: this.any, tipus: this.tipus, comentaris: this.comentaris}); // 
   	this.goBack();
 
   }

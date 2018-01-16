@@ -1,34 +1,39 @@
-<p>
-  crearalbum works!
-</p>
-
-<div class="container">
-    <h2>Afegir album</h2>
-
-    <form>
-      <div class="form-group">
-        <label for="nom">Nom</label>
-        <input [(ngModel)]="nom" type="text" class="form-control" required>
+<!--Creem el formulari on indiquem el nom de cada etiqueta, i haurem d'omplir els camps, cada camp sera obligat omplirlo"-->
+  <div class="container">
+    <div>
+      <div>
+        
+        <input [(ngModel)]="nom" type="text" class="mdl-textfield__input" required>
+        <label for="nom" class="mdl-textfield__label">Nom</label>
       </div>
 
-      <div class="form-group">
-        <label for="grup">Grup</label>
-        <input [(ngModel)]="grup" type="text" class="form-control" required>
+      <div>
+        
+        <input [(ngModel)]="grup" type="text" class="mdl-textfield__input" required>
+        <label for="grup" class="mdl-textfield__label">Grup</label>
       </div>
 		
-		<div class="form-group">
-	        <label for="imatge">link imatge</label>
-	        <input [(ngModel)]="imatge" type="text" class="form-control" required>
+  		<div>
+        
+        <input [(ngModel)]="imatge" type="text" class="mdl-textfield__input" required>
+        <label for="imatge" class="mdl-textfield__label">link imatge</label>
+    	</div>
+
+  		<div>
+	        <label for="any" class="mdl-textfield__label">Any</label>
+	        <input [(ngModel)]="any" type="text" class="mdl-textfield__input" required>
       	</div>
 
-		<div class="form-group">
-	        <label for="any">Any</label>
-	        <input [(ngModel)]="any" type="text" class="form-control" required>
-      	</div>
-
+<<<<<<< HEAD
       	<div class="form-group">
 	        <label for="tipus">Tipus</label>
 	        <select [(ngModel)]="tipus" name="tipus">
+=======
+      	<div>
+	        <label for="tipus" class="mdl-textfield__label">Tipus</label>
+	        <select [(ngModel)]="any" name="tipus">
+            <!--Creem un desplegable on haurem d'escollir el tipus de musica que serà l'album que creearem.-->
+>>>>>>> 8508cc7eb46d400d69e32e81affc0f358e66461d
 	        	<option value="rock">rock</option>
 	        	<option value="electronica">electronica</option>
 	        	<option value="metal">metal</option>
@@ -37,18 +42,15 @@
 	        	<option value="reggae">reggae</option>
 	        	<option value="clasica">clasica</option>
 	        </select>
-      	</div>
-        
+      	</div>        
 
-        <div class="form-group">
-	        <label for="comentaris">Comentaris</label>
+        <div class="form-group" >
+	        <label for="comentaris" class="mdl-textfield__label">Comentaris</label>
 	        <input [(ngModel)]="comentaris" type="text" class="form-control" required>
       	</div>
 
-      <button type="submit" (click)="guardarAlbum()" class="btn btn-default">Guardar</button>
-      <button type="return" (click)="goBack()" class="btn btn-default">Retorn</button>
+      <button type="submit" (click)="guardarAlbum()" class="btn btn-default">Guardar</button> <!--Creem el botó de guardar l'album on li pasem la funció guardar quan cliquem a sobre el botó-->
+      <button type="return" (click)="goBack()" class="btn btn-default">Retorn</button><!--Creem el botó per retornar a la llista dels albums, on li pasem la funció retornar quan cliquem a sobre el botó-->
+    </div>
 
-
-    </form>
-
-</div>
+  </div>

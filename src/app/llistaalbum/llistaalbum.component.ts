@@ -8,18 +8,22 @@ import { AlbumsService } from '../albums.service';
 })
 export class LlistaalbumComponent implements OnInit {
 
-  albums = [];
+  albums = []; // creem un array on guardarem els albums
   constructor(private llistaAlbumsService: AlbumsService) {
 
   }
 
   ngOnInit() {
-    this.albums = this.llistaAlbumsService.getAlbums();
+    this.albums = this.llistaAlbumsService.getAlbums(); // incialitzem l'array albums
 
   }
   ngAfterViewInit(){
+<<<<<<< HEAD
   	this.albums = this.llistaAlbumsService.getAlbums();
     console.log(this.albums);
+=======
+  	this.albums = this.llistaAlbumsService.getAlbums(); 
+>>>>>>> 8508cc7eb46d400d69e32e81affc0f358e66461d
   }
 
 }
