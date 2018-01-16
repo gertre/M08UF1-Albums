@@ -18,12 +18,9 @@ export class LlistaalbumComponent implements OnInit {
 
   }
   ngAfterViewInit(){
-<<<<<<< HEAD
-  	this.albums = this.llistaAlbumsService.getAlbums();
-    console.log(this.albums);
-=======
+
   	this.albums = this.llistaAlbumsService.getAlbums(); 
->>>>>>> 8508cc7eb46d400d69e32e81affc0f358e66461d
+
   }
 
 }
